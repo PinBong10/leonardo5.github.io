@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="sk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web-stranka</title>
+  <link rel="stylesheet" href="formatovanie.css">
+  <!-- Awesome Font CDN link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body id="bodyid">
+  <section id="header">
+    
+
+    <!-- Navigačný panel -->
+    <div>
+      <a href="#" onclick="toggleHeaderColor(); toggleSection();"><img src="leo34.png" class="logo" alt="Obrázok sa nenačítal"></a>
+      <ul id="navbar"> <!-- Nečíslovaný zoznam -->
+        <li><a href="index.html">Domov</a></li>
+        <li><a href="Život a dielo.html">Život a dielo</a></li>
+        <li><a href="Významné diela.html">Významné diela</a></li>
+        <li><a href="Vplyv a dedičstvo.html">Vplyv a dedičstvo</a></li>
+        <li><a href="Galéria.html">Galéria</a></li>
+        <li><a href="Kontakt.html">Kontakt</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <main>
+    <section id="contact">
+      <h1>Kontaktujte nás</h1>
+      <p>Máte otázky alebo pripomienky? Radi sa s vami spojíme!</p>
+
+      <form action="#" method="post">
+        <label for="name">Meno:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Správa:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Odoslať</button>
+      </form>
+
+      <h2>Kontaktné údaje</h2>
+      <p><strong>Email:</strong> info@leonardoinfo.sk</p>
+      <p><strong>Telefón:</strong> +421 944 356 732</p>
+      <p><strong>Adresa:</strong> Komenského 12, 05201 Spišská Nová Ves, Slovensko</p>
+      <div class="kontakt-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6603.139475476374!2d20.56395826395467!3d48.94477265258598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473e4ed63a504edb%3A0x58bfaf614afd995f!2zUmFkbmnEjW7DqSBuw6FtZXN0aWUgMTg0Mi82LCAwNTIgMDEgU3BpxaFza8OhIE5vdsOhIFZlcw!5e0!3m2!1ssk!2ssk!4v1724334667844!5m2!1ssk!2ssk" width="100%" height="750" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+
+    <div id="div-end">
+      <p>Všetky práva vyhradené od 2010-2024©</p>
+    </div>
+  </main>
+  <script>
+    function submitForm() {
+      // Zobrazenie vyskakovacieho okna
+      alert("Správa bola úspešne odoslaná!");
+      // Resetovanie formulára
+      document.getElementById("contactForm").reset();
+      return false; // Zabránenie skutočnému odoslaniu formulára na server
+    }
+    
+    function toggleSection() {
+        // Skontroluj, či je šírka obrazovky menšia ako 768px (typická šírka pre mobilné zariadenia)
+        if (window.innerWidth < 890) {
+            var section = document.getElementById("navbar");
+            if (section.style.display === "none") {
+                section.style.display = "block"; // Zobraziť sekciu, ak je skrytá
+            } else {
+                section.style.display = "none"; // Skryť sekciu, ak je zobrazená
+            }
+        }
+    }
+    function toggleSection() {
+    // Skontroluj, či je šírka obrazovky menšia ako 890px (typická šírka pre mobilné zariadenia)
+    if (window.innerWidth < 890) {
+        var section = document.getElementById("navbar");
+        var logo = document.querySelector('.logo'); // Vyberte obrázok
+
+        if (section.style.display === "none") {
+            section.style.display = "block"; // Zobraziť sekciu, ak je skrytá
+            logo.classList.remove('transparent'); // Odstrániť priehľadnosť
+        } else {
+            section.style.display = "none"; // Skryť sekciu, ak je zobrazená
+            logo.classList.add('transparent'); // Pridať priehľadnosť
+        }
+    }
+}
+function toggleHeaderColor() {
+    var header = document.getElementById("header"); // Vyberte hlavičku
+
+    // Skontrolujte aktuálnu farbu pozadia a nastavte novú farbu
+    if (header.style.backgroundColor === "burlywood") {
+        header.style.backgroundColor = ""; // Reset farby na predvolenú hodnotu
+        header.style.boxShadow = ""; // Reset box-shadow na predvolenú hodnotu
+    } else {
+        header.style.backgroundColor = "burlywood"; // Zmeňte farbu na burlywood
+        header.style.boxShadow = "none"; // Nastavte box-shadow na none
+    }
+}
+  </script>
+</body>
+
+</html>

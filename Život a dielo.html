@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="sk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web-stranka</title>
+  <link rel="stylesheet" href="formatovanie.css">
+  <!-- Awesome Font CDN link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body id="bodyid">
+  <section id="header">
+
+    <!-- Navigačný panel -->
+    <div>
+      <a href="#" onclick="toggleHeaderColor(); toggleSection();"><img src="leo34.png" class="logo" alt="Obrázok sa nenačítal"></a>
+      <ul id="navbar"> <!-- Nečíslovaný zoznam -->
+        <li><a href="index.html" >Domov</a></li> <!-- Položka zoznamu s hypertextovým odkazom -->
+        <li><a href="Život a dielo.html">Život a dielo</a></li>
+        <li><a href="Významné diela.html">Významné diela</a></li>
+        <li><a href="Vplyv a dedičstvo.html">Vplyv a dedičstvo</a></li>
+        <li><a href="Galéria.html">Galéria</a></li>
+        <li><a href="Kontakt.html">Kontakt</a></li>
+        
+      </ul>
+  </section>
+  <section>
+    <div class="container">
+      <h1>Leonardo da Vinci – História veľkého génia</h1>
+      <p>
+          Leonardo da Vinci (1452–1519) bol jednou z najvýznamnejších osobností renesancie a v histórii ľudstva zanechal nezmazateľnú stopu. Narodil sa 15. apríla 1452 v dedinke Vinci neďaleko Florencie ako nemanželský syn notára a roľníčky. Napriek tomu, že nemal formálne vzdelanie, už v mladosti prejavil mimoriadny talent v kreslení, čo ho priviedlo do dielne slávneho florentského umelca Andrea del Verrocchia, kde začal svoju kariéru ako maliar a učenec.
+      </p>
+      <img src="leo2.jpeg" alt="Leonardo da Vinci" class="image">
+      <h2>Maliarstvo a umelecké úspechy</h2>
+      <p>
+          Leonardo sa preslávil najmä ako maliar, pričom jeho diela sú dodnes považované za vrcholy renesančného umenia. Medzi jeho najznámejšie obrazy patria:
+      </p>
+      
+      <ul>
+          
+              Mona Lisa – jeden z najznámejších a najslávnejších obrazov na svete, ktorý je cenený pre svoju záhadnú tvár a dokonalú techniku.<br>
+          
+              Posledná večera – veľkolepá nástenná maľba v kláštore Santa Maria delle Grazie v Miláne, ktorá zachytáva emocionálny moment z Biblie.
+          
+      </ul>
+  
+      <p>
+          Jeho umenie bolo charakterizované inovatívnou technikou, dokonalým využitím svetla a tieňa (tzv. sfumato) a hlbokým záujmom o ľudskú anatómiu, ktorú študoval s cieľom zlepšiť svoje zobrazenie ľudského tela.
+      </p>
+      <img src="leo4.jpg" alt="Leonardo da Vinci" class="image">
+      <h2>Veda a inžinierstvo</h2>
+    <p>
+        Okrem maliarstva sa Leonardo da Vinci zaujímal aj o vedu a inžinierstvo. 
+        V jeho poznámkach sú nákresy a opisy rôznych vynálezov, vrátane letúňov, vojenských strojov a hydraulických zariadení. 
+        Jeho zvedavosť ho viedla k experimentovaniu s mechanikou a prírodnými vedami, čo ho robilo jedným z prvých moderných vedcov.
+    </p>
+    <img src="leo5.jpg" alt="Leonardo da Vinci" class="image">
+
+    <h2>Anatomické štúdie</h2>
+    <p>
+        Leonardo venoval veľa času štúdiu ľudskej anatómie. 
+        Vykonal mnohé pitvy, aby pochopil štruktúru tela a fungovanie orgánov. 
+        Jeho presné anatomické kresby sú považované za revolučné a predbiehali svoju dobu. 
+        Tieto štúdie mu umožnili preniknúť do hlbokého porozumenia pohybu a proporcií, čo sa odrazilo aj v jeho maliarskych technikách.
+    </p>
+    <img src="leo8.jpg" alt="Leonardo da Vinci" class="image">
+
+
+    <h2>Osobný život a vzťahy</h2>
+    <p>
+        Leonardo mal zložitý osobný život a jeho vzťahy s inými umelcami a osobnosťami doby boli často problematické. 
+        Hovorí sa, že mal mnohé záujmy a široký okruh priateľov, ale taktiež bol známy svojou osamelosťou a tajomnosťou.
+    </p>
+    <img src="leo9.jpeg" alt="Leonardo da Vinci" class="image">
+
+
+
+    <h2>Posledné roky</h2>
+    <p>
+        Leonardo da Vinci strávil posledné roky svojho života vo Francúzsku, kde sa stal súčasťou kráľovského dvora. 
+        Zomrel 2. mája 1519 v Amboise. Jeho odkaz žije ďalej a jeho dielo naďalej inšpiruje umelcov, vedcov a mysliteľov po celom svete.
+    </p>
+    <img src="leo10.png" alt="Leonardo da Vinci" class="image">
+</section>
+     
+  </div>
+  </section>
+  <script>
+    function toggleSection() {
+        // Skontroluj, či je šírka obrazovky menšia ako 768px (typická šírka pre mobilné zariadenia)
+        if (window.innerWidth < 890) {
+            var section = document.getElementById("navbar");
+            if (section.style.display === "none") {
+                section.style.display = "block"; // Zobraziť sekciu, ak je skrytá
+            } else {
+                section.style.display = "none"; // Skryť sekciu, ak je zobrazená
+            }
+        }
+    }
+    function toggleSection() {
+    // Skontroluj, či je šírka obrazovky menšia ako 890px (typická šírka pre mobilné zariadenia)
+    if (window.innerWidth < 890) {
+        var section = document.getElementById("navbar");
+        var logo = document.querySelector('.logo'); // Vyberte obrázok
+
+        if (section.style.display === "none") {
+            section.style.display = "block"; // Zobraziť sekciu, ak je skrytá
+            logo.classList.remove('transparent'); // Odstrániť priehľadnosť
+        } else {
+            section.style.display = "none"; // Skryť sekciu, ak je zobrazená
+            logo.classList.add('transparent'); // Pridať priehľadnosť
+        }
+    }
+}
+function toggleHeaderColor() {
+    var header = document.getElementById("header"); // Vyberte hlavičku
+
+    // Skontrolujte aktuálnu farbu pozadia a nastavte novú farbu
+    if (header.style.backgroundColor === "burlywood") {
+        header.style.backgroundColor = ""; // Reset farby na predvolenú hodnotu
+        header.style.boxShadow = ""; // Reset box-shadow na predvolenú hodnotu
+    } else {
+        header.style.backgroundColor = "burlywood"; // Zmeňte farbu na burlywood
+        header.style.boxShadow = "none"; // Nastavte box-shadow na none
+    }
+}
+    </script>
+  </body>
+  </html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="sk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web-stranka</title>
+  <link rel="stylesheet" href="formatovanie.css">
+  <!-- Awesome Font CDN link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body id="bodyid">
+  <section id="header">
+    
+
+    <!-- Navigačný panel -->
+    <div>
+      <a href="#" onclick="toggleHeaderColor(); toggleSection();"><img src="leo34.png" class="logo" alt="Obrázok sa nenačítal"></a>
+      <ul id="navbar"> <!-- Nečíslovaný zoznam -->
+        <li><a href="index.html" >Domov</a></li> <!-- Položka zoznamu s hypertextovým odkazom -->
+        <li><a href="Život a dielo.html">Život a dielo</a></li>
+        <li><a href="Významné diela.html">Významné diela</a></li>
+        <li><a href="Vplyv a dedičstvo.html">Vplyv a dedičstvo</a></li>
+        <li><a href="Galéria.html">Galéria</a></li>
+        <li><a href="Kontakt.html">Kontakt</a></li>        
+      </ul>
+      </div>
+  </section>
+  
+      
+        <h1>Významné diela Leonarda da Vinciho</h1>
+        
+        <section id="iddiela">
+      
+        <div class="carousel">
+          <div class="carousel-images">
+            <div class="carousel-item active">
+              <img src="leo11.jpg" alt="Mona Lisa" class="image">
+              <h2>Mona Lisa</h2>
+              <p>Mona Lisa je jedným z najznámejších a najvýznamnejších obrazov v histórii umenia. Je známa svojou záhadnou tvárou a dokonalou technikou, ktorá zachytáva prirodzenosť a hĺbku emócií. Mnoho ľudí je fascinovaných jej jemným úsmevom a tajomstvami, ktoré obklopujú jej identitu.</p>
+            </div>
+      
+            <div class="carousel-item">
+              <img src="leo12.jpg" alt="Dama s hranostajom" class="image">
+              <h2>Dama s hranostajom</h2>
+              <p>Tento portrét mladé ženy s hranostajom je známy pre svoju precíznu techniku a zložitú kompozíciu. Obraz je považovaný za jeden z najvýznamnejších portrétov v dejinách umenia a vyžaruje silný pocit osobnosti a postavy.</p>
+            </div>
+      
+            <div class="carousel-item">
+              <img src="leo13.jpg" alt="Oltár San Donato" class="image">
+              <h2>Oltár San Donato</h2>
+              <p>Aj keď sa dielo nezachovalo v pôvodnej podobe, Leonardo vytvoril náčrty pre oltár v kostole San Donato v Miláne. Toto dielo je považované za jedno z jeho inovatívnych prác, ktoré spájajú náboženské témy s inovatívnymi technikami.</p>
+            </div>
+      
+            <div class="carousel-item">
+              <img src="leo14.jpg" alt="Svatý Ján Krstiteľ" class="image">
+              <h2>Svatý Ján Krstiteľ</h2>
+              <p>Tento obraz zobrazuje Svätej Jána Krstiteľa, ktorý je považovaný za jedno z posledných Leonardoových diel. Je známy svojou hĺbkou a tajomstvom, ktoré zobrazuje v postave a kompozícii.</p>
+            </div>
+      
+            <div class="carousel-item">
+              <img src="leo15.jpg" alt="Rukopisy a nákresy" class="image">
+              <h2>Rukopisy a nákresy</h2>
+              <p>Leonardo zanechal množstvo rukopisov, ktoré obsahujú jeho myšlienky, vynálezy a štúdie. Medzi najznámejšie patrí Codex Atlanticus, ktorý obsahuje poznámky o technológii, mechanike a prírode.</p>
+            </div>
+          </div>
+      
+          <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
+          <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+      </section>
+
+      <script>
+        let currentSlide = 0;
+        
+        function moveSlide(direction) {
+            const slides = document.querySelectorAll('.carousel-item');
+            slides[currentSlide].classList.remove('active');
+        
+            currentSlide += direction;
+        
+            if (currentSlide < 0) {
+                currentSlide = slides.length - 1; // Ak sme na prvom, posuňte na posledný
+            } else if (currentSlide >= slides.length) {
+                currentSlide = 0; // Ak sme na poslednom, posuňte na prvý
+            }
+        
+            slides[currentSlide].classList.add('active');
+            const offset = -currentSlide * 100; // Posuňte na správnu pozíciu
+            document.querySelector('.carousel-images').style.transform = `translateX(${offset}%)`;
+        }
+        
+    function toggleSection() {
+        // Skontroluj, či je šírka obrazovky menšia ako 768px (typická šírka pre mobilné zariadenia)
+        if (window.innerWidth < 890) {
+            var section = document.getElementById("navbar");
+            if (section.style.display === "none") {
+                section.style.display = "block"; // Zobraziť sekciu, ak je skrytá
+            } else {
+                section.style.display = "none"; // Skryť sekciu, ak je zobrazená
+            }
+        }
+    }
+    function toggleSection() {
+    // Skontroluj, či je šírka obrazovky menšia ako 890px (typická šírka pre mobilné zariadenia)
+    if (window.innerWidth < 890) {
+        var section = document.getElementById("navbar");
+        var logo = document.querySelector('.logo'); // Vyberte obrázok
+
+        if (section.style.display === "none") {
+            section.style.display = "block"; // Zobraziť sekciu, ak je skrytá
+            logo.classList.remove('transparent'); // Odstrániť priehľadnosť
+        } else {
+            section.style.display = "none"; // Skryť sekciu, ak je zobrazená
+            logo.classList.add('transparent'); // Pridať priehľadnosť
+        }
+    }
+}
+function toggleHeaderColor() {
+    var header = document.getElementById("header"); // Vyberte hlavičku
+
+    // Skontrolujte aktuálnu farbu pozadia a nastavte novú farbu
+    if (header.style.backgroundColor === "burlywood") {
+        header.style.backgroundColor = ""; // Reset farby na predvolenú hodnotu
+        header.style.boxShadow = ""; // Reset box-shadow na predvolenú hodnotu
+    } else {
+        header.style.backgroundColor = "burlywood"; // Zmeňte farbu na burlywood
+        header.style.boxShadow = "none"; // Nastavte box-shadow na none
+    }
+}
+    
+        </script>
+  </body>
+  </html>

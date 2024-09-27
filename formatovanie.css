@@ -1,0 +1,268 @@
+#bodyid{
+  background-color: burlywood;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+.logo {
+  position: absolute;
+  top: 30px;
+  left: 10px;
+  width: 120px; /* Nastavenie šírky loga */
+  height: auto; 
+  background: transparent;
+  cursor: auto;
+  background: transparent;
+}
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+  
+}
+#navbar li {
+  list-style: none;
+  padding: 0 20px; /* Pridanie vnútornej medzery (horný/dolný, ľavý/pravý) */
+  position: relative;
+}
+/* Štýly pre odkazy v navigačnom paneli */
+#navbar li a {
+  text-decoration: none; /* Odstráni čiaru pod textom */
+  font-size: 1.5em;
+  font-weight: 600;
+  color: sienna; /* Predvolená farba textu */
+  position: relative; /* Nastavenie relatívneho umiestnenia pre správne umiestnenie pseudo-elementu */
+  
+}
+/* Štýly pre odkazy pri prechode myšou (hover) */
+#navbar li a:hover {
+  color: rgb(227, 136, 94); /* Farba textu pri hoverovaní */
+}
+/* Štýly pre podčiarknutie pri prechode myšou (hover) */
+#navbar li a:hover::after {
+  content: "";
+  width: 50%; /* Šírka podčiarknutia */
+  height: 2px; /* Výška podčiarknutia */
+  background: rgb(227, 136, 94); /* Farba podčiarknutia */
+  position: absolute;
+  bottom: -4px; /* Odstup od textu */
+  left: 0; /* Začiatok podčiarknutia zľava */
+}
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 80px;
+  background-color: azure;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: rgb(182, 156, 121);
+}
+.image {
+  width: 100%;      /* Umožní, aby obrázok mal celú šírku kontajnera */
+  height: auto;     /* Udrží pomer strán */
+  display: block;   /* Vytvorí medzeru pod obrázkom */
+  margin: 20px auto; /* Centrovanie obrázku */
+}
+
+#leo1 {
+  font-size: 2rem;
+  text-align: center;  /* Zarovná text do stredu */
+  line-height: 1.6;    /* Zlepší čitateľnosť s medzerou medzi riadkami */   
+}
+.container {
+  max-width: 1500px;  /* Nastaví maximálnu šírku kontajnera */
+  margin: 0 auto;    /* Centrum horizontálneho zarovnania */
+  padding: 20px;     /* Medzera okolo textu */
+}
+#iddiela {
+  max-width: 1200px; /* Maximum width of the section */
+  margin: 0 auto; /* Centering the section */
+  padding: 20px;
+}
+
+/* Carousel container */
+.carousel {
+  position: relative; /* Position relative for buttons */
+  overflow: hidden; /* Hide overflow */
+}
+
+/* Container for carousel images */
+.carousel-images {
+  display: flex; /* Use flexbox for horizontal alignment */
+  transition: transform 0.5s ease; /* Smooth transition */
+}
+
+/* Carousel item */
+.carousel-item {
+  min-width: 100%; /* Each item takes full width */
+  max-width: 50%; /* Limit image width to 50% of container */
+  padding: 10px; /* Add padding for spacing */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Style for images */
+.carousel-item img {
+  width: 100%; /* Image takes full width of item */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Prevent any space below images */
+}
+
+/* Headings and paragraphs */
+.carousel-item h2 {
+  margin: 10px 0 5px; /* Margin for heading */
+/* Heading size */
+}
+
+.carousel-item p {
+  margin: 0; /* Remove default margin */
+  font-size: 16px; /* Paragraph size */
+}
+
+/* Navigation buttons */
+.carousel-button {
+  position: absolute; /* Position buttons over the carousel */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust to center */
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  border: none; /* Remove border */
+  padding: 10px; /* Add padding */
+  cursor: pointer; /* Cursor change on hover */
+  z-index: 100; /* Ensure buttons are above other elements */
+}
+
+/* Positioning the previous button */
+.carousel-button.prev {
+  left: 10px; /* Position on left */
+}
+
+/* Positioning the next button */
+.carousel-button.next {
+  right: 10px; /* Position on right */
+}
+
+/* Hover effects for buttons */
+.carousel-button:hover {
+  background-color: rgba(255, 255, 255, 1); /* Solid background on hover */
+}
+#strong {
+  color: darkred;
+}
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap; /* Zalomí obrázky na ďalší riadok */
+  gap: 10px; /* Medzera medzi obrázkami */
+}
+
+.image-gallery img {
+  width: calc(50% - 10px); /* Každý obrázok zaberá 50% šírky mínus medzera */
+  height: 800px; /* Všetky obrázky budú mať rovnakú výšku */
+  object-fit: cover; /* Zachová proporcie obrázkov */
+}
+#contact {
+  text-align: center; /* Zarovnanie textu na stred */
+  padding: 20px; /* Vnútorné odsadenie pre sekciu */
+}
+
+/* Štýl pre nadpisy v kontakte */
+#contact h1, #contact h2 {
+  color: sienna; /* Tmavá modrá farba */
+  margin-bottom: 15px; /* Vzdialenosť pod nadpisom */
+}
+
+/* Štýl pre odseky v kontakte */
+#contact p {
+  margin: 10px 0; /* Vzdialenosť medzi odsekmi */
+   /* Veľkosť písma pre odseky */
+}
+
+/* Štýl pre formulár v kontakte */
+#contact form {
+  max-width: 600px; /* Maximálna šírka formulára */
+  margin: 0 auto; /* Centrovanie formulára */
+}
+
+/* Štýl pre vstupné polia a textové oblasti vo formulári */
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+  width: 100%; /* Šírka 100% pre vstupné polia */
+  padding: 10px; /* Vnútorné odsadenie */
+  border: 1px solid #ccc; /* Rámik */
+  border-radius: 4px; /* Zaoblenie rohov */
+  margin-bottom: 10px; /* Vzdialenosť pod každým polom */
+}
+
+/* Štýl pre tlačidlá vo formulári */
+#contact button {
+  background-color: darkred; /* Modrá farba pozadia */
+  color: #fff; /* Biela farba textu */
+  border: none; /* Bez rámu */
+  padding: 10px 15px; /* Vnútorné odsadenie */
+  border-radius: 5px; /* Zaoblené rohy */
+  cursor: pointer; /* Zmena kurzora na ruku */
+  font-size: 1rem; /* Veľkosť písma */
+  transition: background-color 0.3s; /* Hladký prechod pri zmene farby */
+}
+
+/* Zmena farby tlačidla pri hover */
+#contact button:hover {
+  background-color: darkred; /* Tmavšia modrá farba */
+}
+@media (max-width: 890px) {
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Zarovná položky na pravú stranu */
+    justify-content: flex-end;
+    margin-left: auto; /* Posunie navbar doprava */
+    text-align: right; /* Zarovná text doprava */
+    font-size: 0.5em;
+    gap: 10px; /* Pridá medzeru medzi položkami */
+    top: 0;
+    right: -800px;
+    max-width: 300px;
+}
+#header {
+    display: flex;
+    justify-content: flex-end; /* Zarovná obsah headera doprava */
+    padding: 10px;
+    box-sizing: border-box; /* Zabráni presahovaniu paddingu */
+}
+
+  #navbar li {
+    margin-bottom: 20px;
+  }
+  .menu-btn {
+    display: block; /* Zobrazí tlačidlo pre otvorenie menu */
+}
+.transparent {
+  opacity: 0.2; /* Nastaví obrázok na 50% nepriehľadnosť */
+  transition: opacity 0.3s; /* Pridá hladký prechod */
+}
+.active-header {
+  background-color: white; /* Zmeňte na požadovanú farbu */
+  transition: background-color 0.3s; /* Pridá hladký prechod */
+  box-shadow: none;
+}
+  .container {
+      padding: 10px; /* Menší padding na menších obrazovkách */
+  }
+
+  #leo1 {
+      font-size: 14px; /* Menšie písmo na menších obrazovkách */
+  }
+  .image-gallery img {
+    width: 100%;
+    height:auto;
+  }
+}

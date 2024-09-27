@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="sk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web-stranka</title>
+  <link rel="stylesheet" href="formatovanie.css">
+  <!-- Awesome Font CDN link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body id="bodyid">
+  <section id="header">
+    
+
+    <!-- Navigačný panel -->
+    <div>
+      <a href="#" onclick="toggleHeaderColor(); toggleSection();"><img src="leo34.png" class="logo" alt="Obrázok sa nenačítal"></a>
+      <ul id="navbar"> <!-- Nečíslovaný zoznam -->
+        <li><a href="index.html" >Domov</a></li> <!-- Položka zoznamu s hypertextovým odkazom -->
+        <li><a href="Život a dielo.html">Život a dielo</a></li>
+        <li><a href="Významné diela.html">Významné diela</a></li>
+        <li><a href="Vplyv a dedičstvo.html">Vplyv a dedičstvo</a></li>
+        <li><a href="Galéria.html">Galéria</a></li>
+        <li><a href="Kontakt.html">Kontakt</a></li>
+        
+      </ul>
+  </section>
+  
+    <div class="container">
+      <h1>Vplyv a dedičstvo Leonarda da Vinciho</h1>
+      <p>Leonardo da Vinci zanechal hlbokú stopu v mnohých oblastiach ľudskej tvorivosti. Jeho dielo neovplyvnilo iba maliarstvo, ale aj vedu, techniku, architektúru, anatómiu a mnohé ďalšie odbory. Tu je niekoľko kľúčových oblastí, v ktorých jeho vplyv dodnes pretrváva:</p>
+
+      
+      <p><strong id="strong">Umenie: </strong>Leonardove techniky, ako napríklad sfumato (jemné prechody medzi svetlom a tieňom), navždy zmenili spôsob, akým sa tvorí maliarske dielo. Jeho priekopnícke štúdium perspektívy a ľudskej anatómie viedlo k realistickejším a dynamickejším zobrazeniam v renesančnom umení. Umenie ako také začalo byť považované za niečo, čo kombinuje nielen krásu, ale aj vedeckú presnosť.</p>
+
+      <p><strong id="strong">Veda a inžinierstvo: </strong>Leonardo da Vinci bol priekopníkom vo vedeckých metódach, akými sú pozorovanie, experimentovanie a dokumentácia. Jeho poznámky plné kresieb mechanizmov, lietajúcich strojov a vojenských vynálezov boli predchodcom moderného inžinierstva. Hoci väčšina jeho vynálezov nebola za jeho života zrealizovaná, mnohé z nich boli neskôr potvrdené ako praktické a inovatívne.</p>
+
+      <p><strong id="strong">Anatómia a medicína: </strong>Jeho podrobné štúdie ľudského tela a orgánov viedli k revolučným objavom v anatómii. Leonardove kresby svalov, kostí a orgánov sú dodnes uznávané ako neuveriteľne presné a priekopnícke pre svoju dobu. To ovplyvnilo nielen maliarstvo, ale aj lekárske štúdium a vedu.</p>
+
+      <p><strong id="strong">Dedičstvo a inšpirácia: </strong>Leonardove myšlienky a práca inšpirovali generácie umelcov, vedcov a inžinierov po stáročia. Bol predchodcom renesančného ideálu "univerzálneho človeka", ktorý neustále skúma rôzne oblasti poznania. Jeho odkaz naďalej žije prostredníctvom múzeí, výstav a moderných technológií, ktoré skúmajú a oživujú jeho vynálezy. Leonardo je symbolom kreativity, inovácie a nekonečnej zvedavosti, čo z neho robí jednu z najväčších osobností v histórii.</p>
+  </div>
+  </section>
+  </body>
+  <script>
+    function toggleSection() {
+        // Skontroluj, či je šírka obrazovky menšia ako 768px (typická šírka pre mobilné zariadenia)
+        if (window.innerWidth < 890) {
+            var section = document.getElementById("navbar");
+            if (section.style.display === "none") {
+                section.style.display = "block"; // Zobraziť sekciu, ak je skrytá
+            } else {
+                section.style.display = "none"; // Skryť sekciu, ak je zobrazená
+            }
+        }
+    }
+    function toggleSection() {
+    // Skontroluj, či je šírka obrazovky menšia ako 890px (typická šírka pre mobilné zariadenia)
+    if (window.innerWidth < 890) {
+        var section = document.getElementById("navbar");
+        var logo = document.querySelector('.logo'); // Vyberte obrázok
+
+        if (section.style.display === "none") {
+            section.style.display = "block"; // Zobraziť sekciu, ak je skrytá
+            logo.classList.remove('transparent'); // Odstrániť priehľadnosť
+        } else {
+            section.style.display = "none"; // Skryť sekciu, ak je zobrazená
+            logo.classList.add('transparent'); // Pridať priehľadnosť
+        }
+    }
+}
+function toggleHeaderColor() {
+    var header = document.getElementById("header"); // Vyberte hlavičku
+
+    // Skontrolujte aktuálnu farbu pozadia a nastavte novú farbu
+    if (header.style.backgroundColor === "burlywood") {
+        header.style.backgroundColor = ""; // Reset farby na predvolenú hodnotu
+        header.style.boxShadow = ""; // Reset box-shadow na predvolenú hodnotu
+    } else {
+        header.style.backgroundColor = "burlywood"; // Zmeňte farbu na burlywood
+        header.style.boxShadow = "none"; // Nastavte box-shadow na none
+    }
+}
+    </script>
+  </html>

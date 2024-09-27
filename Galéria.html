@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="sk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web-stranka</title>
+  <link rel="stylesheet" href="formatovanie.css">
+  <!-- Awesome Font CDN link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body id="bodyid">
+  <section id="header">
+
+    <!-- Navigačný panel -->
+    <div>
+      <a href="#" onclick="toggleHeaderColor(); toggleSection();"><img src="leo34.png" class="logo" alt="Obrázok sa nenačítal"></a>
+      <ul id="navbar"> <!-- Nečíslovaný zoznam -->
+        <li><a href="index.html" >Domov</a></li> <!-- Položka zoznamu s hypertextovým odkazom -->
+        <li><a href="Život a dielo.html">Život a dielo</a></li>
+        <li><a href="Významné diela.html">Významné diela</a></li>
+        <li><a href="Vplyv a dedičstvo.html">Vplyv a dedičstvo</a></li>
+        <li><a href="Galéria.html">Galéria</a></li>
+        <li><a href="Kontakt.html">Kontakt</a></li>
+        
+      </ul>
+  </section>
+
+  <section id="idgaleria">
+  <div>
+    <div class="image-gallery">
+      <img src="loe20.avif" alt="Leonardo da Vinci" class="image">
+      <img src="loe21.avif" alt="Leonardo da Vinci" class="image">
+      <img src="loe23.avif" alt="Leonardo da Vinci" class="image">
+      <img src="loe24.avif" alt="Leonardo da Vinci" class="image">
+      <img src="loe26.jpg" alt="Leonardo da Vinci" class="image">
+      <img src="loe27.avif" alt="Leonardo da Vinci" class="image">
+    </div>
+  </div>
+  </section>
+  </body>
+  <script>
+    function toggleSection() {
+        // Skontroluj, či je šírka obrazovky menšia ako 768px (typická šírka pre mobilné zariadenia)
+        if (window.innerWidth < 890) {
+            var section = document.getElementById("navbar");
+            if (section.style.display === "none") {
+                section.style.display = "block"; // Zobraziť sekciu, ak je skrytá
+            } else {
+                section.style.display = "none"; // Skryť sekciu, ak je zobrazená
+            }
+        }
+    }
+    function toggleSection() {
+    // Skontroluj, či je šírka obrazovky menšia ako 890px (typická šírka pre mobilné zariadenia)
+    if (window.innerWidth < 890) {
+        var section = document.getElementById("navbar");
+        var logo = document.querySelector('.logo'); // Vyberte obrázok
+
+        if (section.style.display === "none") {
+            section.style.display = "block"; // Zobraziť sekciu, ak je skrytá
+            logo.classList.remove('transparent'); // Odstrániť priehľadnosť
+        } else {
+            section.style.display = "none"; // Skryť sekciu, ak je zobrazená
+            logo.classList.add('transparent'); // Pridať priehľadnosť
+        }
+    }
+}
+function toggleHeaderColor() {
+    var header = document.getElementById("header"); // Vyberte hlavičku
+
+    // Skontrolujte aktuálnu farbu pozadia a nastavte novú farbu
+    if (header.style.backgroundColor === "burlywood") {
+        header.style.backgroundColor = ""; // Reset farby na predvolenú hodnotu
+        header.style.boxShadow = ""; // Reset box-shadow na predvolenú hodnotu
+    } else {
+        header.style.backgroundColor = "burlywood"; // Zmeňte farbu na burlywood
+        header.style.boxShadow = "none"; // Nastavte box-shadow na none
+    }
+}
+    </script>
+  </html>
